@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carbon Footprint Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Carbon Footprint Calculator</h1>
+        <p>Calculate and understand your carbon footprint with our easy-to-use tool.</p>
+    </header>
+
+    <hr>
+
+    <section>
+        <form id="CarbonForm">
+            
+            <h2>Transportation</h2>
+
+            <label for="KmDriven">How many Kilometers do you drive per week?</label><br>
+            <input type="number" id="KmDriven" name="KmDriven" required><br><br>
+
+            <label for="publicTransport">How many times per week have you used public transport?</label><br>
+            <input type="number" id="publicTransport" name="publicTransport" required><br><br>
+
+            <label for="flights">How much flights have you taken per year?</label><br>
+            <input type="number" id="flights" name="flights" required><br><br>
+
+            <hr>
+
+            <h2>Home Energy Usage</h2>
+
+            <label for="electricity">What is your monthly electricity bill (in USD)?</label><br>
+            <input type="number" id="electricity" name="electricity" required><br><br>
+
+            <label for="gas">Do you use natural gas?</label><br>
+            <select id="gas" name="gas" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <hr>
+
+            <h2>Diet</h2>
+
+            <label for="diet">What best describes your diet?</label><br>
+            <select id="diet" name="diet" required>
+                <option value="meat-heavy">Meat-heavy</option>
+                <option value="balanced">Balanced</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+            </select><br><br>
+
+            <hr>
+
+            <h2>Waste and Recycling</h2>
+
+            <label for="recycling">How often do you recycle?</label><br>
+            <select id="recycling" name="recycling" required>
+                <option value="always">Always</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="never">Never</option>
+            </select><br><br>
+
+            <label for="compost">Do you compost your food waste?</label><br>
+            <select id="compost" name="compost" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+
+            <hr>
+
+            <button type="submit">Calculate my Carbon Footprint!</button>
+
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Your Carbon Footprint Result</h2>
+        <p>Your estimated carbon footprint will appear here</p>
+        <div id="result">
+            <!-- The calculated carbon footprint will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>Made for a Sustainability STEM project</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
